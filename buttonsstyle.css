@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700");
+* {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+
+.add {
+  border: 2px solid #159957;
+  color: #159957;
+  background-color: #f1f2f2;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+.add:hover {
+  background-color: #159957;
+  border-color: #159957;
+  color: #f1f2f2;
+}
+
+.add:active {
+  background-color: #159957;
+  border-color: #159957;
+  color: #f1f2f2;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.add:focus, .add:active:focus {
+  background-color: #159957;
+  border-color: #159957;
+  color: #f1f2f2;
+  outline: 5px auto #159957;
+}
+
+.add:visited {
+  background-color: #159957;
+  border-color: #159957;
+}
+
+.discard {
+  border: 2px solid #c33764;
+  color: #c33764;
+  background-color: #f1f2f2;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+.discard:hover {
+  background-color: #c33764;
+  border-color: #c33764;
+  color: #f1f2f2;
+}
+
+.discard:active {
+  background-color: #c33764;
+  border-color: #c33764;
+  color: #f1f2f2;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.discard:focus, .discard:active:focus {
+  background-color: #c33764;
+  border-color: #c33764;
+  color: #f1f2f2;
+  outline: 5px auto #c33764;
+}
+
+.discard:visited {
+  background-color: #c33764;
+  border-color: #c33764;
+}
+
+.buttons {
+  margin-top: 1rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.buttons button {
+  margin: 0;
+  border: none;
+  padding: 0.2rem;
+  border-radius: 5px;
+  letter-spacing: 0.1rem;
+}
+
+.buttons button:hover {
+  cursor: pointer;
+}
+
+.buttons .add {
+  border: 2px solid #159957;
+  padding: 0.3rem 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.buttons .discard {
+  border: 2px solid #c33764;
+  padding: 0.3rem 0.2rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+/*# sourceMappingURL=buttonsstyle.css.map */
