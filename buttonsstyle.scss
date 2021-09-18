@@ -58,7 +58,7 @@ $transition: all 0.25s ease;
   button {
     margin: 0;
     border: none;
-    padding: 0.3rem;
+    padding: 0.2rem;
     border-radius: 5px;
     letter-spacing: 0.1rem;
     &:hover {
@@ -68,7 +68,7 @@ $transition: all 0.25s ease;
 
   .add {
     border: 2px solid #159957;
-    padding: 0.3rem 1rem;
+    padding: 0.3rem 0.5rem;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -77,7 +77,7 @@ $transition: all 0.25s ease;
 
   .discard{
     border: 2px solid #c33764;
-    padding: 0.3rem 1rem;
+    padding: 0.3rem 0.2rem;
     text-align: center;
     text-decoration: none;
     display: inline-block;
