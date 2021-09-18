@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700");
+
+// variables
+$cancel: #c33764;
+$submit: #159957;
+$white: #f1f2f2;
+$transition: all 0.25s ease;
+
+// mixin
+@mixin mybutton($color_1, $color_2) {
+  border: 2px solid $color_1;
+  color: $color_1;
+  background-color: $color_2;
+  transition: $transition;
+  &:hover {
+    background-color: $color_1;
+    border-color: $color_1;
+    color: $color_2;
+  }
+  &:active {
+    background-color: $color_1;
+    border-color: $color_1;
+    color: $color_2;
+    box-shadow: none;
+  }
+  &:focus,
+  &:active:focus {
+    background-color: $color_1;
+    border-color: $color_1;
+    color: $color_2;
+    outline: 5px auto $color_1;
+  }
+  &:visited {
+    background-color: $color_1;
+    border-color: $color_1;
+  }
+}
+
+// styles
+* {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+
+.add {
+  @include mybutton($submit, $white);
+}
+
+.discard {
+  @include mybutton($cancel, $white);
+}
+
+.buttons {
+  margin-top: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  button {
+    margin: 0;
+    border: none;
+    padding: 0.3rem;
+    border-radius: 5px;
+    letter-spacing: 0.1rem;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .add {
+    border: 2px solid #159957;
+    padding: 0.3rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+  .discard{
+    border: 2px solid #c33764;
+    padding: 0.3rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+}

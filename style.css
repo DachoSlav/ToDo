@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  margin: 1em;
+}
+
+.add__form {
+  padding: 5em;
+  width: 5em;
+  height: auto;
+  background-color: cadetblue;
+  -webkit-clip-path: polygon(80% 0, 100% 20%, 100% 100%, 0 100%, 0 0);
+          clip-path: polygon(80% 0, 100% 20%, 100% 100%, 0 100%, 0 0);
+  position: relative;
+  border-radius: 5px;
+}
+
+.add__form:hover {
+  cursor: pointer;
+}
+
+.add__form:hover .close {
+  opacity: 1;
+}
+
+.add__form .close {
+  position: absolute;
+  left: 48%;
+  top: 35%;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.add__form .close:before,
+.add__form .close:after {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  content: " ";
+  height: 33px;
+  width: 2px;
+  background-color: #333;
+}
+
+.add__form .close:before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.add__form .close:after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+#triangle-topright {
+  width: 0;
+  height: 0;
+  border-top: 32px solid #75c1c4;
+  border-left: 32px solid transparent;
+  position: absolute;
+  top: 0;
+  left: 80%;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+/*------------------------------------------- FORM -------------------------------------------*/
+#display-none {
+  display: none;
+}
+
+.filling__form {
+  width: 100%;
+  padding: 1em;
+  margin: 2rem auto;
+  border: 1px solid #302e2e;
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 5px;
+  position: relative;
+  min-width: 200px;
+  max-width: 350px;
+}
+
+.filling__form .form__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.filling__form .form__wrapper * {
+  margin: 0.2rem auto;
+}
+
+.filling__form .form__wrapper input {
+  padding: 0.2rem;
+}
+/*# sourceMappingURL=style.css.map */

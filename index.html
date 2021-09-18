@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="buttonsstyle.css" />
+  </head>
+  <body>
+
+
+
+    <section>
+      <div class="add__form" id="add__form">
+        <div id="triangle-topright"></div>
+        <div class="cross">
+          <a href="#" class="close"></a>
+        </div>
+      </div>
+    </section>
+
+
+
+    <div id="display-none">
+      <div class="filling__form">
+        <div class="form__wrapper">
+          <label for="form__subject">
+            <input type="text" class="form__subject" placeholder="Note Name" />
+          </label>
+
+          <label for="form__description">
+            <input
+              type="text"
+              class="form__description"
+              placeholder="Node Description"
+            />
+          </label>
+
+          <label for="form__duedate">
+            <input type="date" class="form__duedate" />
+          </label>
+
+          <div class="buttons">
+            <button class="add" id="add">Add</button>
+            <button class="discard" id="discard">Discard</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/main.js"></script>
+  </body>
+</html>
