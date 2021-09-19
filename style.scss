@@ -7,7 +7,9 @@
 
 body {
   margin: 1em;
+  
 }
+
 
 .add__form {
   padding: 5em;
@@ -93,4 +95,51 @@ body {
   }
 
   
+}
+
+
+
+
+/*-------------------------------------------LISTS-----------------------------------------*/
+
+.list{
+  margin-top: 2rem;
+  width: 100%;
+  font-size: 1.5rem;
+
+  
+}
+.list__elements{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  > div{
+    padding: 1rem;
+    margin: 0.2rem;
+  }
+}
+
+.todo{
+  background: rgb(167, 167, 167);
+  height: 50em;
+  width: 100%;
+  
+}
+.doing{
+  background: rgb(73, 101, 151);
+  height: 50em;
+  width: 100%;
+}
+.done{
+  background: rgb(0, 187, 6);
+  height: 50em;
+  width: 100%;
+}
+
+.todo__item{
+  display: flex;
+  flex-direction: column;
+  background: rgb(194, 139, 0);
+  padding: 0.5rem;
+  margin: 0.2rem;
 }

@@ -9,9 +9,6 @@
     <link rel="stylesheet" href="buttonsstyle.css" />
   </head>
   <body>
-
-
-
     <section>
       <div class="add__form" id="add__form">
         <div id="triangle-topright"></div>
@@ -21,13 +18,16 @@
       </div>
     </section>
 
-
-
     <div id="display-none">
       <div class="filling__form">
         <div class="form__wrapper">
           <label for="form__subject">
-            <input type="text" class="form__subject" placeholder="Note Name" />
+            <input
+              type="text"
+              class="form__subject"
+              placeholder="Note Name"
+              id="form__subject"
+            />
           </label>
 
           <label for="form__description">
@@ -35,11 +35,12 @@
               type="text"
               class="form__description"
               placeholder="Node Description"
+              id="form__description"
             />
           </label>
 
           <label for="form__duedate">
-            <input type="date" class="form__duedate" />
+            <input type="date" class="form__duedate" id="form__duedate" />
           </label>
 
           <div class="buttons">
@@ -49,7 +50,37 @@
         </div>
       </div>
     </div>
+    <div class="list">
+      <div class="list__wrapper">
+        <div class="list__elements">
+          <div class="todo" id="todo">
+            <h3>To Do</h3>
+          </div>
+          <div class="doing" id="doing">
+            <h3>Doing</h3>
+          </div>
+          <div class="done">
+            <h3>Done</h3>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="/main.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(function () {
+        $(".todo__item").draggable();
+        $(".doing").droppable({
+          drop: function (event, ui) {
+            $(this).addClass("ui-state-highlight").find("p").html("Dropped!");
+          },
+        });
+      });
+    </script>
   </body>
 </html>
