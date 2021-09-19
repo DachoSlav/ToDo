@@ -145,12 +145,6 @@ body {
   width: 100%;
 }
 
-.doing {
-  background: #496597;
-  height: 50em;
-  width: 100%;
-}
-
 .done {
   background: #00bb06;
   height: 50em;
@@ -161,10 +155,13 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background: #c28b00;
   padding: 0.5rem;
   margin: 0.2rem;

@@ -1,0 +1,32 @@
+// const theTime = new Date();
+    // const currentYear = theTime.getFullYear() * 365;
+    // const currentMonth = (theTime.getMonth() + 1) * 30;
+    // const currentDay = theTime.getDate();
+    
+    // console.log(currentYear)
+    // console.log(currentMonth)
+    // console.log(currentDay)
+
+    // var days = currentYear+ currentMonth + currentDay;
+
+    // var years = currentYear / 365;
+    // var months = currentMonth / 30;
+    // var days = currentDay;
+    // var timeOfDay = noteTime.value;
+
+    // console.log(years + " years")
+    // console.log(months + " months")
+    // console.log(days + " days")
+
+
+
+
+
+
+
+
+
+
+
+    
+    

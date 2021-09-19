@@ -18,23 +18,36 @@ add__note.addEventListener("click", function(){
 
  },);
  var noteName = document.getElementById("form__subject");
- var noteDescription = document.getElementById("form__description");
+ var noteTime = document.getElementById("form__time");
  var noteDate = document.getElementById("form__duedate"); 
  
  add.addEventListener("click", function(){
+    if(noteName.value == "" || parseInt(noteName.value)+0 == noteName.value){
+        alert("Please enter your Note Name properly");
+    }else{
     
-    // document.getElementById("todo__item").innerHTML = 
-    // noteName.value + " " 
-    // + noteDescription.value + " " 
-    // + noteDate.value;
+    
 
+    
     const listElement = document.createElement("div");
     const todo = document.getElementById("todo");
+    const doneButton = document.createElement("button");
     
+
+
+
+
     listElement.className += "todo__item";
     listElement.setAttribute("id","todo__item");
-    listElement.innerHTML = noteName.value;
+    listElement.innerHTML = noteName.value+"  -" + ' '+ " Due: "+ noteTime.value+"h" + " " + noteDate.value;
+
+    doneButton.setAttribute("id", "done__button");
+    doneButton.textContent = "Done";
+
+
+    
     todo.appendChild(listElement);
+    listElement.appendChild(doneButton);
    
    
 
@@ -42,9 +55,9 @@ add__note.addEventListener("click", function(){
     document.getElementById("display-none").style = 'display: none';
 
     noteName.value = "";
-    noteDescription.value = "";
+    
     noteDate.value = "";
-
+}
  })
 
  

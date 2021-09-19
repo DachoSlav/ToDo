@@ -84,3 +84,12 @@ $transition: all 0.25s ease;
     font-size: 16px;
   }
 }
+
+#done__button{
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+  &:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+}
