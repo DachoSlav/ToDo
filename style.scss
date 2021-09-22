@@ -7,6 +7,8 @@
 
 body {
   margin: 1em;
+  background: linear-gradient(to bottom, lightblue 25%, cadetblue);
+  height: 100vh;
 }
 
 .add__form {
@@ -71,7 +73,7 @@ body {
   width: 100%;
   padding: 1em;
   margin: 2rem auto;
-  border: 1px solid rgb(48, 46, 46);
+  border: 1px solid cadetblue;
   width: 40%;
   display: flex;
   justify-content: center;
@@ -79,6 +81,7 @@ body {
   position: relative;
   min-width: 200px;
   max-width: 350px;
+  background: linear-gradient(to top, lightblue 25%, cadetblue);
   .form__wrapper {
     display: flex;
     flex-direction: column;
@@ -102,21 +105,22 @@ body {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
+  
   > div {
     padding: 1rem;
     margin: 0.2rem;
+    border-radius: 5px;
   }
 }
 
 .todo {
-  background: rgb(167, 167, 167);
-  height: 50em;
+  background: rgb(117, 193, 196);
   width: 100%;
 }
 
 .done {
-  background: rgb(0, 187, 6);
-  height: 50em;
+  background: cadetblue;
+  
   width: 100%;
 }
 
@@ -124,7 +128,15 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background: rgb(175, 154, 97);
+  background: cadetblue;
   padding: 0.5rem;
   margin: 0.2rem;
+  border-radius: 5px;
+}
+
+.done__style__element{
+  background: rgb(117, 193, 196);
+  padding: 0.5rem;
+  margin: 0.2rem;
+  border-radius: 5px;
 }

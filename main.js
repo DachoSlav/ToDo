@@ -41,6 +41,7 @@ add__note.addEventListener("click", function(){
     listElement.className += "todo__item";
     listElement.setAttribute("id","todo__item");
     listElement.innerHTML = noteName.value+"  -" + ' '+ " Due: "+ noteTime.value+"h" + " " + noteDate.value;
+    
     const theName = listElement.innerHTML = noteName.value;
     doneButton.setAttribute("id", "done__button");
     doneButton.textContent = "Done";
@@ -55,7 +56,8 @@ add__note.addEventListener("click", function(){
         todo.removeChild(listElement);
         listElement.removeChild(doneButton);
         done.appendChild(listElement);
-        
+        listElement.innerHTML = theName;
+        listElement.setAttribute("class", "done__style__element")
         
     } )
    
