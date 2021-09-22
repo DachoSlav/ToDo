@@ -31,6 +31,7 @@ add__note.addEventListener("click", function(){
     
     const listElement = document.createElement("div");
     const todo = document.getElementById("todo");
+    const done = document.getElementById("done")
     const doneButton = document.createElement("button");
     
 
@@ -40,7 +41,7 @@ add__note.addEventListener("click", function(){
     listElement.className += "todo__item";
     listElement.setAttribute("id","todo__item");
     listElement.innerHTML = noteName.value+"  -" + ' '+ " Due: "+ noteTime.value+"h" + " " + noteDate.value;
-
+    const theName = listElement.innerHTML = noteName.value;
     doneButton.setAttribute("id", "done__button");
     doneButton.textContent = "Done";
 
@@ -48,16 +49,25 @@ add__note.addEventListener("click", function(){
     
     todo.appendChild(listElement);
     listElement.appendChild(doneButton);
-   
-   
 
 
+    doneButton.addEventListener("click",function(){
+        todo.removeChild(listElement);
+        listElement.removeChild(doneButton);
+        done.appendChild(listElement);
+        
+        
+    } )
+   
+ 
     document.getElementById("display-none").style = 'display: none';
-
     noteName.value = "";
-    
     noteDate.value = "";
+
+
 }
  })
+
+
 
  
