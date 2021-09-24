@@ -9,6 +9,7 @@ body {
   margin: 1em;
   background: linear-gradient(to bottom, lightblue 25%, cadetblue);
   height: 100vh;
+  
 }
 
 .add__form {
@@ -68,10 +69,15 @@ body {
 /*------------------------------------------- FORM -------------------------------------------*/
 #display-none {
   display: none;
+  position: absolute;
+  top: 10vh;
+  left: 50%;
+  transform: translate(-50%, 0);
+  
 }
 .filling__form {
   width: 100%;
-  padding: 1em;
+  padding: 3em;
   margin: 2rem auto;
   border: 1px solid cadetblue;
   width: 40%;
@@ -79,8 +85,8 @@ body {
   justify-content: center;
   border-radius: 5px;
   position: relative;
-  min-width: 200px;
-  max-width: 350px;
+  min-width: 300px;
+  max-width: 550px;
   background: linear-gradient(to top, lightblue 25%, cadetblue);
   .form__wrapper {
     display: flex;
@@ -105,7 +111,7 @@ body {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  
+
   > div {
     padding: 1rem;
     margin: 0.2rem;
@@ -120,7 +126,7 @@ body {
 
 .done {
   background: cadetblue;
-  
+
   width: 100%;
 }
 
@@ -134,9 +140,24 @@ body {
   border-radius: 5px;
 }
 
-.done__style__element{
+.done__style__element {
   background: rgb(117, 193, 196);
   padding: 0.5rem;
   margin: 0.2rem;
   border-radius: 5px;
+}
+#notes__created,
+#notes__done {
+  font-size: 1.25rem;
+  font-family: "Courier New", Courier, monospace;
+}
+@media only screen and (max-width: 500px) {
+  .list__elements{
+    flex-direction: column;
+  }
+
+  .filling__form{
+    padding: 1rem;
+  }
+
 }

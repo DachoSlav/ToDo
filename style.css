@@ -79,11 +79,16 @@ body {
 /*------------------------------------------- FORM -------------------------------------------*/
 #display-none {
   display: none;
+  position: absolute;
+  top: 10vh;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
 }
 
 .filling__form {
   width: 100%;
-  padding: 1em;
+  padding: 3em;
   margin: 2rem auto;
   border: 1px solid cadetblue;
   width: 40%;
@@ -95,8 +100,8 @@ body {
           justify-content: center;
   border-radius: 5px;
   position: relative;
-  min-width: 200px;
-  max-width: 350px;
+  min-width: 300px;
+  max-width: 550px;
   background: -webkit-gradient(linear, left bottom, left top, color-stop(25%, lightblue), to(cadetblue));
   background: linear-gradient(to top, lightblue 25%, cadetblue);
 }
@@ -177,5 +182,23 @@ body {
   padding: 0.5rem;
   margin: 0.2rem;
   border-radius: 5px;
+}
+
+#notes__created,
+#notes__done {
+  font-size: 1.25rem;
+  font-family: "Courier New", Courier, monospace;
+}
+
+@media only screen and (max-width: 500px) {
+  .list__elements {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .filling__form {
+    padding: 1rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
