@@ -36,11 +36,15 @@
 
           <label for="form__time">
             <form action="/form/submit" method="post">
-              <input type="time" name="time" value="00:00" id="form__time" class="form__time"/>
+              <input
+                type="time"
+                name="time"
+                value="00:00"
+                id="form__time"
+                class="form__time"
+              />
             </form>
           </label>
-
-          
 
           <div class="buttons">
             <button class="add" id="add">Add</button>
@@ -55,12 +59,18 @@
           <div class="todo" id="todo">
             <h3>To Do</h3>
           </div>
-          
+
           <div class="done" id="done">
             <h3>Done</h3>
           </div>
         </div>
       </div>
+    </div>
+
+    <div class="success__rate" id="success__rate">
+      <div><p id="notes__created"></p></div>
+      <div><p id="notes__done" ></p></div>
+      <div><p id="success__rate" ></p></div>
     </div>
 
     <script src="/main.js"></script>
@@ -70,13 +80,9 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    
+
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script>
-    $( function() {
-      $( "todo__item" ).draggable();
-    } );
-    </script>
+    <script></script>
   </body>
 </html>
