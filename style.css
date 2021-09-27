@@ -22,6 +22,8 @@ body {
           clip-path: polygon(80% 0, 100% 20%, 100% 100%, 0 100%, 0 0);
   position: relative;
   border-radius: 5px;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
 }
 
 .add__form:hover {
@@ -126,6 +128,7 @@ body {
 
 /*-------------------------------------------LISTS-----------------------------------------*/
 .list {
+  display: none;
   margin: 2rem 0;
   width: 100%;
   font-size: 1.5rem;
@@ -153,10 +156,14 @@ body {
 .todo {
   background: #75c1c4;
   width: 100%;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
 }
 
 .done {
   background: cadetblue;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
   width: 100%;
 }
 
@@ -190,7 +197,21 @@ body {
   font-family: "Courier New", Courier, monospace;
 }
 
-@media only screen and (max-width: 500px) {
+#text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  letter-spacing: 0.2rem;
+  font-size: 2.5rem;
+  color: #14758d;
+  font-family: 'Birthstone', cursive;
+  text-align: center;
+  text-shadow: black 0px 2px;
+}
+
+@media only screen and (max-width: 750px) {
   .list__elements {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

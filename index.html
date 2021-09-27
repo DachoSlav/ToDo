@@ -7,8 +7,16 @@
     <title>ToDo</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="buttonsstyle.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Birthstone&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
+    <div id="text">I am glad you came here today, lets get going!</div>
+
     <section>
       <div class="add__form" id="add__form">
         <div id="triangle-topright"></div>
@@ -30,20 +38,13 @@
             />
           </label>
 
-          <label for="form__duedate">
-            <input type="date" class="form__duedate" id="form__duedate" />
-          </label>
-
           <label for="form__time">
-            <form action="/form/submit" method="post">
-              <input
-                type="time"
-                name="time"
-                value="00:00"
-                id="form__time"
-                class="form__time"
-              />
-            </form>
+            <input
+              type="text"
+              name="form__time"
+              id="form__time"
+              placeholder="Time in hours (Due Time)"
+            />
           </label>
 
           <div class="buttons">
@@ -53,7 +54,7 @@
         </div>
       </div>
     </div>
-    <div class="list">
+    <div class="list" id="list">
       <div class="list__wrapper">
         <div class="list__elements">
           <div class="todo" id="todo">
@@ -69,8 +70,8 @@
 
     <div class="success__rate" id="success__rate">
       <div><p id="notes__created"></p></div>
-      <div><p id="notes__done" ></p></div>
-      <div><p id="success__rate" ></p></div>
+      <div><p id="notes__done"></p></div>
+      <div><p id="success__rate"></p></div>
     </div>
 
     <script src="/main.js"></script>

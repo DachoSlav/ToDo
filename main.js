@@ -8,6 +8,7 @@ var notes__done__counter = 0;
 add__note.addEventListener("click", function () {
   setTimeout(function () {
     document.getElementById("display-none").style = "display: block";
+    document.getElementById("text").style = "display: none";
   }, 100);
 });
 
@@ -16,36 +17,42 @@ discard.addEventListener("click", function () {
     document.getElementById("display-none").style = "display: none";
   }, 250);
 });
+
 var noteName = document.getElementById("form__subject");
 var noteTime = document.getElementById("form__time");
-var noteDate = document.getElementById("form__duedate");
-var productivity = document.getElementById("success__rate");
 
 add.addEventListener("click", function () {
-  if (noteName.value == "" || parseInt(noteName.value) + 0 == noteName.value) {
-    alert("Please enter your Note Name properly");
+  if (
+    noteName.value == "" ||
+    parseInt(noteName.value) + 0 == noteName.value ||
+    isNaN(noteTime.value) == true
+  ) {
+    alert("Please check if all your credentials are correctly provided ");
   } else {
+    document.getElementById("list").style = "display: block";
+
     const listElement = document.createElement("div");
     const todo = document.getElementById("todo");
     const done = document.getElementById("done");
     const doneButton = document.createElement("button");
+
+    theTime = document.createElement("p");
     notes__created__counter++;
+
     document.getElementById("notes__created").innerHTML =
       "Notes Created: " + notes__created__counter;
 
-    listElement.className += "todo__item";
+    listElement.setAttribute("class", "todo__item");
     listElement.setAttribute("id", "todo__item");
-    listElement.innerHTML =
-      noteName.value +
-      "  -" +
-      " " +
-      " Due: " +
-      noteTime.value +
-      "h" +
-      " " +
-      noteDate.value;
+
+    listElement.innerHTML = noteName.value;
 
     const theName = (listElement.innerHTML = noteName.value);
+
+    theTime.setAttribute("id", "demo");
+    theTime.innerHTML = noteTime.value + "h";
+    listElement.appendChild(theTime);
+
     doneButton.setAttribute("id", "done__button");
     doneButton.textContent = "Done";
 
@@ -55,16 +62,42 @@ add.addEventListener("click", function () {
     doneButton.addEventListener("click", function () {
       todo.removeChild(listElement);
       listElement.removeChild(doneButton);
+
       done.appendChild(listElement);
       listElement.innerHTML = theName;
       listElement.setAttribute("class", "done__style__element");
       notes__done__counter++;
-      document.getElementById("notes__done").innerHTML = "Notes Done: " + notes__done__counter;
-      
+      document.getElementById("notes__done").innerHTML =
+        "Notes Done: " + notes__done__counter;
     });
 
     document.getElementById("display-none").style = "display: none";
-    noteName.value = "";
-    noteDate.value = "";
+
+    
+
+    
+    
   }
+  
 });
+function cd(){
+
+  var hour = noteTime.value;
+  var minute = noteTime.value * 60;
+  var second = noteTime.value * 60 * 60;
+  var seconds = second;
+var countdown = setInterval(function () {
+seconds--;
+if(seconds > 0){
+  document.getElementById('demo').innerHTML = seconds;
+  console.log(seconds)
+}
+if(seconds == 0){
+  document.getElementById("demo").innerHTML = "EXPIRED";
+  document.getElementById("todo__item").style = "backgound-color: red";
+  document.getElementById("done__button").style = "display: none";
+}
+
+if (seconds <= 0) clearInterval(countdown);
+}, 1000);
+}
