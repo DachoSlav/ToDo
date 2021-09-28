@@ -5,6 +5,7 @@ var discard = document.getElementById("discard");
 var notes__created__counter = 0;
 var notes__done__counter = 0;
 
+//function for appearing the filling form
 add__note.addEventListener("click", function () {
   setTimeout(function () {
     document.getElementById("display-none").style = "display: block";
@@ -12,12 +13,17 @@ add__note.addEventListener("click", function () {
   }, 100);
 });
 
+
+
+//function for discarding the element
 discard.addEventListener("click", function () {
   setTimeout(function () {
     document.getElementById("display-none").style = "display: none";
   }, 250);
 });
 
+
+//function for adding the new element in ToDo list 
 var noteName = document.getElementById("form__subject");
 var noteTime = document.getElementById("form__time");
 
@@ -46,7 +52,8 @@ add.addEventListener("click", function () {
     listElement.setAttribute("id", "todo__item");
 
     listElement.innerHTML = noteName.value;
-
+  
+    
     const theName = (listElement.innerHTML = noteName.value);
 
     theTime.setAttribute("id", "demo");
@@ -69,35 +76,48 @@ add.addEventListener("click", function () {
       notes__done__counter++;
       document.getElementById("notes__done").innerHTML =
         "Notes Done: " + notes__done__counter;
+        
     });
-
     document.getElementById("display-none").style = "display: none";
-
-    
-
-    
     
   }
+ 
   
+
+    var seconds = noteTime.value * 60 * 60;
+   
+
+      function myLoop() {         
+        setTimeout(function() {   
+            
+          seconds--;                    
+          if (seconds > 0) {   
+            document.getElementById("demo").innerHTML = seconds;
+            console.log(seconds);           
+            myLoop();      
+          } 
+         else if (seconds == 0) {
+            document.getElementById("demo").innerHTML = "EXPIRED";
+            document.getElementById("todo__item").style = "backgound-color: red";
+            document.getElementById("done__button").style = "display: none";
+          }
+          else{
+            seconds=0;
+          }                      
+        }, 1000)
+      }
+
+      myLoop();
+    
+      
+      
+      
+
+      // array1.forEach(element => console.log(element));
+
+
+  noteName.value ='';
+  noteTime.value = '';
 });
-function cd(){
 
-  var hour = noteTime.value;
-  var minute = noteTime.value * 60;
-  var second = noteTime.value * 60 * 60;
-  var seconds = second;
-var countdown = setInterval(function () {
-seconds--;
-if(seconds > 0){
-  document.getElementById('demo').innerHTML = seconds;
-  console.log(seconds)
-}
-if(seconds == 0){
-  document.getElementById("demo").innerHTML = "EXPIRED";
-  document.getElementById("todo__item").style = "backgound-color: red";
-  document.getElementById("done__button").style = "display: none";
-}
 
-if (seconds <= 0) clearInterval(countdown);
-}, 1000);
-}
