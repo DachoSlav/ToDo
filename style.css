@@ -192,7 +192,8 @@ body {
 }
 
 #notes__created,
-#notes__done {
+#notes__done,
+#success__rate {
   font-size: 1.25rem;
   font-family: "Courier New", Courier, monospace;
 }
