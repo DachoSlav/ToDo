@@ -37,7 +37,10 @@ add.addEventListener("click", function () {
     alert("Please check if all your credentials are correctly provided ");
   } else {
     document.getElementById("list").style = "display: block";
-
+    document.getElementById("success__rate").innerHTML = "Productivity: "+ (notes__done__counter/notes__created__counter)*100 + "%"
+    document.getElementById("notes__created").innerHTML = "NotesCreated: 0";
+    document.getElementById("notes__done").innerHTML = "Noted Done: 0";
+    document.getElementById("success__rate").innerHTML = "Productivity: 0%";
     const listElement = document.createElement("div");
     const todo = document.getElementById("todo");
     const done = document.getElementById("done");
@@ -79,7 +82,11 @@ add.addEventListener("click", function () {
         "Notes Done: " + notes__done__counter;
 
         document.getElementById("success__rate").innerHTML = "Productivity: "+ (notes__done__counter/notes__created__counter)*100 + "%"
+        document.getElementById("todo__item").className = "done__button__class"
         
+
+
+
     });
     document.getElementById("display-none").style = "display: none";
     

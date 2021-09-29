@@ -144,6 +144,7 @@ body {
   padding: 0.5rem;
   margin: 0.2rem;
   border-radius: 5px;
+  letter-spacing: 1px;
 }
 
 .done__style__element {
@@ -171,6 +172,17 @@ body {
   text-align: center;
   text-shadow: black 0px 2px;
   
+}
+.done__button__class{
+  background: rgb(117, 193, 196);
+  color: black;
+  padding: 0.5rem;
+  margin: 0.2rem;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 @media only screen and (max-width: 750px) {
   .list__elements{
