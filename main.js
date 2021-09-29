@@ -63,6 +63,7 @@ add.addEventListener("click", function () {
     theTime.setAttribute("id", "demo");
     // theTime.innerHTML = noteTime.value + "h";
     listElement.appendChild(theTime);
+ 
 
     doneButton.setAttribute("id", "done__button");
     doneButton.textContent = "Done";
@@ -82,7 +83,7 @@ add.addEventListener("click", function () {
         "Notes Done: " + notes__done__counter;
 
         document.getElementById("success__rate").innerHTML = "Productivity: "+ (notes__done__counter/notes__created__counter)*100 + "%"
-        document.getElementById("todo__item").className = "done__button__class"
+        document.getElementById("todo__item").className = "done__button__class";
         
 
 
