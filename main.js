@@ -77,6 +77,7 @@ add.addEventListener("click", function () {
     listElement.setAttribute("id", "todo__item");
 
     listElement.innerHTML = str2;
+    var string = 0;
   
     const theName = (listElement.innerHTML = str2);
   
