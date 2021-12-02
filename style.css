@@ -186,7 +186,7 @@ body {
 }
 
 .done__style__element {
-  background: #159957;
+  background: cadetblue;
   color: black;
   padding: 0.5rem;
   margin: 0.2rem;
@@ -225,7 +225,7 @@ body {
 }
 
 .done__button__class {
-  background: #159957;
+  background: cadetblue;
   color: black;
   padding: 0.5rem;
   margin: 0.2rem;

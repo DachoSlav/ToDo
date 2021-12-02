@@ -84,8 +84,12 @@ add.addEventListener("click", function () {
     doneButton.setAttribute("id", "done__button");
     doneButton.textContent = "Done";
 
+
+
+
     todo.appendChild(listElement);
     listElement.appendChild(doneButton);
+   
 
     doneButton.addEventListener("click", function () {
       todo.removeChild(listElement);
